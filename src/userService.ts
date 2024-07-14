@@ -6,7 +6,7 @@ interface UserDetails {
     email: string;
 }
 
-export const getUserDetails = async (userId: string): Promise<UserDetails> => {
+export const getUserDetails = async (userId: number): Promise<UserDetails> => {
     const userData = await fetchUserData(userId);
     return {
         id: userData.id,
